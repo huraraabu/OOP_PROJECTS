@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{748D6A89-466A-4671-8227-778F17DA68BA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GmsGui</RootNamespace>
+    <AssemblyName>GmsGui</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminFrmFolder\IncomeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFrmFolder\IncomeFrm.Designer.cs">
+      <DependentUpon>IncomeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFrmFolder\RedListCustomerFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFrmFolder\RedListCustomerFrm.Designer.cs">
+      <DependentUpon>RedListCustomerFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business_Layer\BrandDetail.cs" />
+    <Compile Include="Business_Layer\ClothDetail.cs" />
+    <Compile Include="Business_Layer\CustomerDetail.cs" />
+    <Compile Include="Business_Layer\CustomerFeedbackDetail.cs" />
+    <Compile Include="Business_Layer\EmployeeDetail.cs" />
+    <Compile Include="Business_Layer\HeadBoyDetail.cs" />
+    <Compile Include="Business_Layer\OwnerDetail.cs" />
+    <Compile Include="Business_Layer\PersonDetail.cs" />
+    <Compile Include="customerFrmFolder\viewBrand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customerFrmFolder\viewBrand.Designer.cs">
+      <DependentUpon>viewBrand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customerFrmFolder\Balancefrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customerFrmFolder\Balancefrm.Designer.cs">
+      <DependentUpon>Balancefrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customerFrmFolder\CustomerFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customerFrmFolder\CustomerFrm.Designer.cs">
+      <DependentUpon>CustomerFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customerFrmFolder\ProductFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customerFrmFolder\ProductFrm.Designer.cs">
+      <DependentUpon>ProductFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customerFrmFolder\PurchasinFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customerFrmFolder\PurchasinFrm.Designer.cs">
+      <DependentUpon>PurchasinFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customerFrmFolder\TopDiscountFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customerFrmFolder\TopDiscountFrm.Designer.cs">
+      <DependentUpon>TopDiscountFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data_Layer\BrandDetailCrud.cs" />
+    <Compile Include="Data_Layer\CustomerDetailCrud.cs" />
+    <Compile Include="Data_Layer\CustomerFeedbackCrud.cs" />
+    <Compile Include="Data_Layer\EmployeeDetailCrud.cs" />
+    <Compile Include="Data_Layer\FileHandler.cs" />
+    <Compile Include="Data_Layer\HeadBoyDetailCrud.cs" />
+    <Compile Include="EmployeeFrmFolder\CusDeatilFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeFrmFolder\CusDeatilFrm.Designer.cs">
+      <DependentUpon>CusDeatilFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeFrmFolder\HighFeedBackFrn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeFrmFolder\HighFeedBackFrn.Designer.cs">
+      <DependentUpon>HighFeedBackFrn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeadBoyFrmFolder\AddproductFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeadBoyFrmFolder\AddproductFrm.Designer.cs">
+      <DependentUpon>AddproductFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeadBoyFrmFolder\brInputFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeadBoyFrmFolder\brInputFrm.Designer.cs">
+      <DependentUpon>brInputFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeadBoyFrmFolder\customerDetailFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeadBoyFrmFolder\customerDetailFrm.Designer.cs">
+      <DependentUpon>customerDetailFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeadBoyFrmFolder\HeadBoyDetailFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeadBoyFrmFolder\HeadBoyDetailFrm.Designer.cs">
+      <DependentUpon>HeadBoyDetailFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeadBoyFrmFolder\ShowClothFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeadBoyFrmFolder\ShowClothFrm.Designer.cs">
+      <DependentUpon>ShowClothFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inputform\InputBrandFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inputform\InputBrandFrm.Designer.cs">
+      <DependentUpon>InputBrandFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data_Layer\OwnerCrud.cs" />
+    <Compile Include="Data_Layer\PersonDetailCrud.cs" />
+    <Compile Include="MenuFrmFolder\ClothDetailFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuFrmFolder\ClothDetailFrm.Designer.cs">
+      <DependentUpon>ClothDetailFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeadBoyFrmFolder\ViewBrandFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeadBoyFrmFolder\ViewBrandFrm.Designer.cs">
+      <DependentUpon>ViewBrandFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFormFolder\ViewCustomerFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFormFolder\ViewCustomerFrm.Designer.cs">
+      <DependentUpon>ViewCustomerFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeFrmFolder\EmployeeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeFrmFolder\EmployeeFrm.Designer.cs">
+      <DependentUpon>EmployeeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFrmFolder\frmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFrmFolder\frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeadBoyFrmFolder\HeadBoyFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeadBoyFrmFolder\HeadBoyFrm.Designer.cs">
+      <DependentUpon>HeadBoyFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inputform\InputFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inputform\InputFrm.Designer.cs">
+      <DependentUpon>InputFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuFrmFolder\IntroFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuFrmFolder\IntroFrm.Designer.cs">
+      <DependentUpon>IntroFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuFrmFolder\loginFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuFrmFolder\loginFrm.Designer.cs">
+      <DependentUpon>loginFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginheadingLnFrm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="loginheadingLnFrm.Designer.cs">
+      <DependentUpon>loginheadingLnFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MenuFrmFolder\SignUpFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuFrmFolder\SignUpFrm.Designer.cs">
+      <DependentUpon>SignUpFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFormFolder\ClothFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFormFolder\ClothFrm.Designer.cs">
+      <DependentUpon>ClothFrm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminFrmFolder\IncomeFrm.resx">
+      <DependentUpon>IncomeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminFrmFolder\RedListCustomerFrm.resx">
+      <DependentUpon>RedListCustomerFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerFrmFolder\viewBrand.resx">
+      <DependentUpon>viewBrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerFrmFolder\Balancefrm.resx">
+      <DependentUpon>Balancefrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerFrmFolder\CustomerFrm.resx">
+      <DependentUpon>CustomerFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerFrmFolder\ProductFrm.resx">
+      <DependentUpon>ProductFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerFrmFolder\PurchasinFrm.resx">
+      <DependentUpon>PurchasinFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerFrmFolder\TopDiscountFrm.resx">
+      <DependentUpon>TopDiscountFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeFrmFolder\CusDeatilFrm.resx">
+      <DependentUpon>CusDeatilFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeFrmFolder\HighFeedBackFrn.resx">
+      <DependentUpon>HighFeedBackFrn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeadBoyFrmFolder\AddproductFrm.resx">
+      <DependentUpon>AddproductFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeadBoyFrmFolder\brInputFrm.resx">
+      <DependentUpon>brInputFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeadBoyFrmFolder\customerDetailFrm.resx">
+      <DependentUpon>customerDetailFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeadBoyFrmFolder\HeadBoyDetailFrm.resx">
+      <DependentUpon>HeadBoyDetailFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeadBoyFrmFolder\ShowClothFrm.resx">
+      <DependentUpon>ShowClothFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inputform\InputBrandFrm.resx">
+      <DependentUpon>InputBrandFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuFrmFolder\ClothDetailFrm.resx">
+      <DependentUpon>ClothDetailFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeadBoyFrmFolder\ViewBrandFrm.resx">
+      <DependentUpon>ViewBrandFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFormFolder\ViewCustomerFrm.resx">
+      <DependentUpon>ViewCustomerFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeFrmFolder\EmployeeFrm.resx">
+      <DependentUpon>EmployeeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminFrmFolder\frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeadBoyFrmFolder\HeadBoyFrm.resx">
+      <DependentUpon>HeadBoyFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inputform\InputFrm.resx">
+      <DependentUpon>InputFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuFrmFolder\IntroFrm.resx">
+      <DependentUpon>IntroFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuFrmFolder\loginFrm.resx">
+      <DependentUpon>loginFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginheadingLnFrm.resx">
+      <DependentUpon>loginheadingLnFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="MenuFrmFolder\SignUpFrm.resx">
+      <DependentUpon>SignUpFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFormFolder\ClothFrm.resx">
+      <DependentUpon>ClothFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shop-94.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shop.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinegiftools.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-username-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-username.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\income.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sale1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove sale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\danger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feedback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addMoney.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\men.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\women.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baby.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newwome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\change.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brand2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\discount.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addMoney1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shop1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-arrow-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-arrow.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-arrow1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-arrow-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-arrow-302.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sr.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
